@@ -29,7 +29,7 @@ function InputBox({ todoList, setTodoList, insertTodo, setTodo }) {
   };
 
   return (
-    <form onSubmit={onPressSubmitButton} className="todoapp__inputbox">
+    <form onSubmit={onPressSubmitButton} className="todo-inputbox">
       {/* 아이템 내용 입력 input */}
       <input
         type="text"
@@ -37,11 +37,11 @@ function InputBox({ todoList, setTodoList, insertTodo, setTodo }) {
         value={text}
         ref={inputRef}
         placeholder="할 일을 입력해주세요"
-        className="todoapp__inputbox-inp"
+        className="todo-inputbox-input"
         onChange={onChangeInput}
       />
       {/* 입력 후 아이템 추가 버튼 */}
-      <button type="submit" className="todoapp__inputbox-add-btn">
+      <button type="submit" className="todo-inputbox-btn">
         +
       </button>
     </form>

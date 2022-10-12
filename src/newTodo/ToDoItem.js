@@ -76,11 +76,11 @@ const ToDoItem = ({
   }, []);
 
   return (
-    <li className="todoapp__item">
+    <li className="todo-item">
       {/* 아이템 완료 체크 / 체크 해제를 위한 체크박스 */}
       <input
         type="checkbox"
-        className="todoapp__item-checkbox"
+        className="todo-item-checkbox"
         checked={todoItem.checked}
         onChange={onChangeCheckbox}
       />
@@ -89,15 +89,15 @@ const ToDoItem = ({
         edited ? (
           <input
             type="text"
-            className="todoapp__item-edit-input"
+            className="todo-item-edit-input"
             value={newText}
             ref={editInputRef}
             onChange={onChangeEditInput}
           />
         ) : (
           <span
-            className={`todoapp__item-ctx ${
-              todoItem.checked ? "todoapp__item-ctx-checked" : ""
+            className={`todo-item-ctx ${
+              todoItem.checked ? "todo-item-ctx-checked" : ""
             }`}
           >
             {todoItem.todo}
@@ -111,14 +111,14 @@ const ToDoItem = ({
             <>
               <button
                 type="button"
-                className="todoapp__item-edit-btn"
+                className="todo-item-edit-btn"
                 onClick={onClickSubmitBtn}
               >
                 👌
               </button>
               <button
                 type="button "
-                className="todoapp__item-edit-btn"
+                className="todo-item-edit-btn"
                 onClick={onClickFinishEditButton}
               >
                 ❌
@@ -127,7 +127,7 @@ const ToDoItem = ({
           ) : (
             <button
               type="button"
-              className="todoapp__item-edit-btn"
+              className="todo-item-edit-btn"
               onClick={onClickEditButton}
             >
               🖋

@@ -97,8 +97,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="homepage__container">
-      <span className="homepage__title">TODO LIST</span>
+    <div className="homepage-container">
+      <span className="homepage-title">TODO LIST</span>
       {/* ToDo Item을 추가할 수 있는 input 박스 */}
       <InputBox
         todoList={todoList}

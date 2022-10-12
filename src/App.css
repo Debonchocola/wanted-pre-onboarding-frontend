@@ -1,5 +1,5 @@
 /* Home Page Container */
-.homepage__container {
+.homepage-container {
   max-width: 480px;
   margin: 0 auto;
   display: flex;
@@ -8,7 +8,7 @@
   padding: 50px 0;
 }
 
-.homepage__title {
+.homepage-title {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -21,12 +21,12 @@
 }
 
 /* ToDo App Input Box */
-.todoapp__inputbox {
+.todo-inputbox {
   width: 100%;
   display: flex;
   align-items: center;
 }
-.todoapp__inputbox-inp {
+.todo-inputbox-input {
   flex: 1;
   border: none;
   /* border-bottom: 1px solid #f1f3f5; */
@@ -37,10 +37,10 @@
   box-sizing: border-box;
   background-color: #676a6f;
 }
-.todoapp__inputbox-inp:focus {
+.todo-inputbox-input:focus {
   outline: none;
 }
-.todoapp__inputbox-add-btn {
+.todo-inputbox-btn {
   border: none;
   border-radius: 0;
   /* background-color: #d0ebff; */
@@ -53,16 +53,16 @@
 }
 
 /* ToDo Item List */
-.todoapp__list {
+.todo-list {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
-.todoapp__list-tit {
+.todo-list-title {
   font-weight: bold;
   margin: 0;
 }
-.todoapp__list-ul {
+.todo-list-ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -71,19 +71,19 @@
 }
 
 /* ToDo Item */
-.todoapp__item {
+.todo-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   height: 36px;
 }
-.todoapp__item:last-child {
+.todo-item:last-child {
   margin-bottom: 0;
 }
-.todoapp__item-checkbox {
+.todo-item-checkbox {
   margin-right: 10px;
 }
-.todoapp__item-edit-input {
+.todo-item-edit-input {
   flex: 1;
   border: none;
   border-bottom: 1px solid #f1f3f5;
@@ -91,31 +91,31 @@
   font-size: 1em;
   box-sizing: border-box;
 }
-.todoapp__item-edit-input:focus {
+.todo-item-edit-input:focus {
   outline: none;
 }
-.todoapp__item-ctx {
+.todo-item-ctx {
   flex: 1;
 }
-.todoapp__item-ctx-checked {
+.todo-item-ctx-checked {
   font-style: italic;
   text-decoration: line-through;
   color: #868e96;
 }
-.todoapp__item-edit-btn,
-.todoapp__item-delete-btn {
+.todo-item-edit-btn,
+.todo-item-delete-btn {
   border: none;
   border-radius: 0;
   height: 36px;
   width: 36px;
   background-color: inherit;
 }
-.todoapp__item-edit-btn:hover,
-.todoapp__item-delete-btn:hover {
+.todo-item-edit-btn:hover,
+.todo-item-delete-btn:hover {
   cursor: pointer;
   background-color: #d0ebff;
 }
-.todoapp__item-edit-btn {
+.todo-item-edit-btn {
   margin-right: 3px;
 }
 

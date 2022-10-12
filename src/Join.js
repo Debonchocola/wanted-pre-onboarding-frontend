@@ -95,9 +95,7 @@ const Join = () => {
         <span className={`message ${isPassword ? "success" : "error"}`}>
           {passwordMessage}
         </span>
-        {/* <button type="submit" onClick={handleSubmit}>
-          버튼
-        </button> */}
+
         <button
           className="join-btn"
           type="button"

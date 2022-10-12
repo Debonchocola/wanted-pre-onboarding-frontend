@@ -10,9 +10,9 @@ const ToDoItemList = ({
   deleteTodo,
   updateTodo,
 }) => (
-  <div className="todoapp__list">
+  <div className="todo-list">
     {/* props로 부터 title 값을 전달 받음 */}
-    <p className="todoapp__list-tit">{title}</p>
+    <p className="todo-list-title">{title}</p>
 
     <ul className="todoapp__list-ul">
       {todoList && // todoList가 있을때만 출력
