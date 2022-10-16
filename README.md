@@ -10,5 +10,8 @@ $ npm start
 # 배포 링크 
 https://634bcc402b95fd5abd7361a2--todolistubp.netlify.app/
 
+#시연영상
+<>
+
 아이디:qaz@qaz.com
 비밀번호:dkdlxl1234!
