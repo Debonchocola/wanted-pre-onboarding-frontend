@@ -6,15 +6,12 @@ const ToDoItem = ({
   setTodoList,
   deleteTodo,
   updateTodo,
+  onChecked,
 }) => {
   const [edited, setEdited] = useState(false);
   const [newText, setNewText] = useState(todoItem.todo);
-
+  const [newchecked, setChecked] = useState(todoItem.isCompleted);
   const editInputRef = useRef(null);
-
-  useEffect(() => {
-    console.log(todoItem);
-  }, []);
 
   useEffect(() => {
     // edit 모드일때 포커싱을 한다.
@@ -23,15 +20,17 @@ const ToDoItem = ({
     }
   }, [edited]);
 
-  const onChangeCheckbox = () => {
-    const nextTodoList = todoList.map((item) => ({
-      ...item,
-      // id 값이 같은 항목의 checked 값을 Toggle 함
-      checked: item.id === todoItem.id ? !item.checked : item.checked,
-    }));
+  // const onChangeCheckbox = (id, todo, isCompleted) => {
+  //   const nextTodoList = todoList.map((item) => ({
+  //     ...item,
+  //     // id 값이 같은 항목의 checked 값을 Toggle 함
+  //     isCompleted: item.id === todoItem.id ? !newchecked : newchecked,
+  //   }));
+  //   console.log(todoItem);
+  //   setTodoList(nextTodoList);
 
-    setTodoList(nextTodoList);
-  };
+  //   updateTodo(todoItem.id, todoItem.todo, !newchecked);
+  // };
 
   const onClickEditButton = () => {
     setEdited(true);
@@ -51,6 +50,7 @@ const ToDoItem = ({
         ...item,
         text: item.id === todoItem.id ? newText : item.text, // 새로운 아이템 내용을 넣어줌
       }));
+      console.log(todoList);
       setTodoList(nextTodoList);
 
       setEdited(false);
@@ -81,8 +81,11 @@ const ToDoItem = ({
       <input
         type="checkbox"
         className="todo-item-checkbox"
-        checked={todoItem.checked}
-        onChange={onChangeCheckbox}
+        iscompleted={todoItem.iscompleted}
+        onChange={() => {
+          onChecked(todoItem.id, todoItem.todo, todoItem.isCompleted);
+        }}
+        onClick={console.log(todoItem)}
       />
       {
         // 아이템 내용
@@ -97,7 +100,7 @@ const ToDoItem = ({
         ) : (
           <span
             className={`todo-item-ctx ${
-              todoItem.checked ? "todo-item-ctx-checked" : ""
+              todoItem.isCompleted ? "todo-item-ctx-checked" : ""
             }`}
           >
             {todoItem.todo}
@@ -106,7 +109,7 @@ const ToDoItem = ({
       }
       {
         // 수정 버튼
-        !todoItem.checked ? (
+        !todoItem.isCompleted ? (
           edited ? (
             <>
               <button
@@ -139,7 +142,7 @@ const ToDoItem = ({
       {/* 삭제 버튼 */}
       <button
         type="button"
-        className="todoapp__item-delete-btn"
+        className="todo-item-delete-btn"
         onClick={() => onRemove(todoItem.id)}
       >
         🗑

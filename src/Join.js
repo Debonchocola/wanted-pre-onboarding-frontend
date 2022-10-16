@@ -11,8 +11,6 @@ const Join = () => {
   const isValidPassword = password.length >= 8;
   const isValidInput = email.length >= 1 && password.length >= 1;
 
-  const getIsActive = isValidEmail && isValidPassword && isValidInput === true;
-
   const onChangeEmail = useCallback((e) => {
     const emailRegex =
       /([\w-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;

@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
   const [todoList, setTodoList] = useState([]);
   const [todos, setTodos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [id, setId] = useState(1);
   const nextId = useRef(0);
   useEffect(() => {
@@ -50,7 +50,7 @@ const Home = () => {
           getTodo();
         })
         .then((result) => {
-          console.log(todos);
+          console.log(result);
           setTodos(result);
           setId(id + 1);
           // setTodos(todos.concat(todos));
@@ -84,7 +84,7 @@ const Home = () => {
       body: JSON.stringify({ todo: text, isCompleted: isCompleted }),
     })
       .then((response) => {
-        console.log(text);
+        console.log(response);
         getTodo();
       })
       .catch((e) => {
@@ -95,6 +95,18 @@ const Home = () => {
   useEffect(() => {
     getTodo();
   }, []);
+
+  const onChecked = (id, todo, iscompleted) => {
+    setTodos(
+      todos.map((item) => {
+        return item.id === id
+          ? { ...item, iscompleted: !item.iscompleted }
+          : item;
+      })
+    );
+    updateTodo(todo, id, !iscompleted);
+    console.log(id, todo, iscompleted);
+  };
 
   return (
     <div className="homepage-container">
@@ -113,6 +125,7 @@ const Home = () => {
         checkedList={false} // (체크되지 않은) 할 일 목록
         deleteTodo={deleteTodo}
         updateTodo={updateTodo}
+        onChecked={onChecked}
       />
       {/* 완료한 Item 리스트 */}
       <ToDoItemList
@@ -122,6 +135,7 @@ const Home = () => {
         checkedList={true} // (체크되어 있는)완료한 목록
         deleteTodo={deleteTodo}
         updateTodo={updateTodo}
+        onChecked={onChecked}
       />
     </div>
   );

@@ -6,11 +6,13 @@ import Join from "./Join";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/join" element={<Join />} />
-      <Route path="/todo" element={<Home />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/todo" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 

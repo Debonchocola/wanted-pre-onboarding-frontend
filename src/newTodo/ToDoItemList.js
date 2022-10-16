@@ -9,12 +9,13 @@ const ToDoItemList = ({
   checkedList,
   deleteTodo,
   updateTodo,
+  onChecked,
 }) => (
   <div className="todo-list">
     {/* props로 부터 title 값을 전달 받음 */}
     <p className="todo-list-title">{title}</p>
 
-    <ul className="todoapp__list-ul">
+    <ul className="todo-list-ul">
       {todoList && // todoList가 있을때만 출력
         todoList.map((todoItem) => {
           // 삭제한 항목인 경우, 출력하지 않음 (deleted가 true)
@@ -31,6 +32,7 @@ const ToDoItemList = ({
               setTodoList={setTodoList}
               deleteTodo={deleteTodo}
               updateTodo={updateTodo}
+              onChecked={onChecked}
             />
           );
         })}
