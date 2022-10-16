@@ -86,7 +86,7 @@ const Join = () => {
           </span>
         )}
         <input
-          type={password}
+          type="password"
           className="input-password"
           placeholder="Password"
           onChange={onChangePassword}
