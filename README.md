@@ -15,25 +15,5 @@ https://todolistub.netlify.app/
 <img width="80%" src="https://user-images.githubusercontent.com/107467812/195345765-49846297-6d72-40bc-97f4-4cdaa2d84b6a.mov"/>
 
 
-
-```javascript
-//SignIn.js
-
-let idValue = '';
-let pwValue = '';
-
-const SignIn = () => {
-  const [val, setVal] = useState(true);
-  function loginCheck(e) {
-    if (e.target.id === 'id') {
-      idValue = e.target.value;
-    } else {
-      pwValue = e.target.value;
-    }
-    idValue.includes('@') && pwValue.length >= 8 ? setVal(false) : setVal(true);
-  }
-};
-```
-
 아이디:qaz@qaz.com
 비밀번호:dkdlxl1234!
