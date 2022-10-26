@@ -14,7 +14,6 @@ https://todolistub.netlify.app/
 
 <img width="80%" src="https://user-images.githubusercontent.com/107467812/195345765-49846297-6d72-40bc-97f4-4cdaa2d84b6a.mov"/>
 
-<img width="640" alt="스크린샷 2022-10-26 오후 11 49 28" src="https://user-images.githubusercontent.com/107467812/198059306-2e25b72b-d36b-4ece-b7c8-b86562a7995c.png">
 
 
 아이디:qaz@qaz.com
