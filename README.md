@@ -16,14 +16,24 @@ https://todolistub.netlify.app/
 
 
 
-...
-const Home = () => {
-  const navigate = useNavigate();
-  const [todoList, setTodoList] = useState([]);
-  const [todos, setTodos] = useState([]);
-  const [id, setId] = useState(1);
-  const nextId = useRef(0);
-...
+```javascript
+//SignIn.js
+
+let idValue = '';
+let pwValue = '';
+
+const SignIn = () => {
+  const [val, setVal] = useState(true);
+  function loginCheck(e) {
+    if (e.target.id === 'id') {
+      idValue = e.target.value;
+    } else {
+      pwValue = e.target.value;
+    }
+    idValue.includes('@') && pwValue.length >= 8 ? setVal(false) : setVal(true);
+  }
+};
+```
 
 아이디:qaz@qaz.com
 비밀번호:dkdlxl1234!
