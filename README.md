@@ -113,4 +113,16 @@ const onChangeEmail = useCallback((e) => {
   </br>
   
   
+  ```javascript
+  <button
+      className="join-btn"
+      type="button"
+      disabled={!(isEmail && isPassword)}
+      onClick={handleSubmit}
+   >
+      로그인으로
+   </button>
+   ```
   
+disabled={!(isEmail && isPassword)}를 통해서 조건에 맞지 않은 경우 버튼이 비활성화 되도록 했습니다.
+</br>
