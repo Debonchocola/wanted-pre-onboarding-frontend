@@ -126,3 +126,42 @@ const onChangeEmail = useCallback((e) => {
   
 disabled={!(isEmail && isPassword)}를 통해서 조건에 맞지 않은 경우 버튼이 비활성화 되도록 했습니다.
 </br>
+
+   - ### 로그인 성공시 todo페이지로 이동
+ ```javascript
+ const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch(API.LOGIN, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if (typeof response.access_token !== "undefined") {
+          localStorage.setItem("token", response.access_token);
+          window.location.href = "/todo";
+          alert("로그인 되었습니다.");
+        } else {
+          alert("잘못된 접근입니다.");
+        }
+      })
+      .catch((err) => {
+        alert("잘못된 접근입니다.");
+      });
+  };
+  ```
+  
+  로그인 완료시 todo페이지로 이동하게 하는 handleSubmit입니다.
+  if (typeof response.access_token !== "undefined") 토큰이 있을 경우
+  localStorage.setItem("token", response.access_token) 로컬스토리지에 토큰을 저장하고
+  window.location.href = "/todo";
+          alert("로그인 되었습니다.");
+          todo페이지로 이동하면서 "로그인 되었습니다"라는 창을 띄웁니다.
+  토큰이 없는 경우는 "잘못된 접근"이라는 창이 뜨도록 에러 처리를 했습니다.
+  </br>
