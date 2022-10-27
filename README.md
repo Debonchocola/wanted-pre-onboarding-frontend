@@ -12,9 +12,9 @@ $ npm start
 # 배포 링크 
 https://todolistub.netlify.app/
 
-# 시연영상
+<!-- # 시연영상
 
-<img width="80%" src="https://user-images.githubusercontent.com/107467812/195345765-49846297-6d72-40bc-97f4-4cdaa2d84b6a.mov"/>
+<img width="80%" src="https://user-images.githubusercontent.com/107467812/195345765-49846297-6d72-40bc-97f4-4cdaa2d84b6a.mov"/> -->
 
 ## 구현사항
 
