@@ -1,9 +1,11 @@
 원티드 사전과제입니다.
 
 # 프로젝트 실행 방법
-```$ npm install
+```
+$ npm install
 
-$ npm start```
+$ npm start
+```
 
 위 순서대로 실행하면 localhost:3000 포트에 실행됩니다.
 
