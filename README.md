@@ -48,7 +48,7 @@ const onChangeEmail = useCallback((e) => {
   setIsEmail은 유효한 상태인지 아닌지를 나타내기 위한 state입니다.
   </br>
   
-  -### 비밀번호 입력창 유효성 검사
+  - ### 비밀번호 입력창 유효성 검사
   ```javascript
   //Join.js
   const onChangePassword = useCallback((e) => {
@@ -73,6 +73,7 @@ const onChangeEmail = useCallback((e) => {
   setIsPassword은 유효한 상태인지 아닌지를 나타내기 위한 state입니다.
   </br>
   
+  - ### 회원가입 완료 후 로그인 페이지로 
   ```javascript
   //Join.js
   const handleSubmit = useCallback(
