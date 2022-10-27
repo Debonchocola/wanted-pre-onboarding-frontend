@@ -16,6 +16,10 @@ https://todolistub.netlify.app/
 
 <img width="80%" src="https://user-images.githubusercontent.com/107467812/195345765-49846297-6d72-40bc-97f4-4cdaa2d84b6a.mov"/>
 
+## 구현사항
 
-아이디:qaz@qaz.com
-비밀번호:dkdlxl1234!
+</br>
+
+# 로그인 / 회원가입
+
+</br>
